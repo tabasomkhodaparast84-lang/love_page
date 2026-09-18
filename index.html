@@ -1,0 +1,1053 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>علیرضای تبسم 💜</title>
+
+<style>
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Tahoma, Arial, sans-serif;
+    background:
+        radial-gradient(circle at top right, #f8dff4 0%, transparent 35%),
+        radial-gradient(circle at bottom left, #dfd2ff 0%, transparent 40%),
+        linear-gradient(135deg,#f7efff,#fff5fa);
+    color:#4d345d;
+    overflow-x:hidden;
+}
+
+/* قلب‌های شناور */
+.floating-heart{
+    position:fixed;
+    bottom:-30px;
+    font-size:22px;
+    opacity:.5;
+    pointer-events:none;
+    animation:floatUp linear infinite;
+    z-index:0;
+}
+
+@keyframes floatUp{
+    from{
+        transform:translateY(0) rotate(0deg);
+        opacity:0;
+    }
+    15%{opacity:.55;}
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+/* کلی */
+.container{
+    width:min(92%,900px);
+    margin:auto;
+    position:relative;
+    z-index:2;
+}
+
+section{
+    padding:70px 0;
+}
+
+.section-title{
+    text-align:center;
+    font-size:27px;
+    color:#704a87;
+    margin-bottom:28px;
+}
+
+.section-title span{
+    display:block;
+    font-size:14px;
+    color:#a276b7;
+    margin-top:9px;
+    font-weight:normal;
+}
+
+/* هدر */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.hero-box{
+    background:rgba(255,255,255,.72);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.8);
+    border-radius:35px;
+    padding:50px 25px;
+    box-shadow:0 15px 45px rgba(100,60,130,.15);
+    width:min(650px,100%);
+}
+
+.hero-heart{
+    font-size:65px;
+    animation:beat 1.4s infinite;
+}
+
+@keyframes beat{
+    0%,100%{transform:scale(1);}
+    50%{transform:scale(1.16);}
+}
+
+.hero h1{
+    margin-top:18px;
+    color:#673d7c;
+    font-size:34px;
+}
+
+.hero p{
+    margin-top:15px;
+    line-height:2;
+    color:#886495;
+}
+
+/* دکمه */
+.btn{
+    border:0;
+    background:linear-gradient(135deg,#9b69b8,#d08ab9);
+    color:white;
+    padding:13px 24px;
+    border-radius:30px;
+    cursor:pointer;
+    font-size:15px;
+    box-shadow:0 8px 20px rgba(130,80,150,.22);
+    transition:.3s;
+}
+
+.btn:hover{
+    transform:translateY(-3px);
+}
+
+/* موزیک */
+.music-card{
+    background:rgba(255,255,255,.78);
+    border-radius:28px;
+    padding:28px;
+    text-align:center;
+    box-shadow:0 12px 35px rgba(100,60,130,.12);
+}
+
+.music-card p{
+    margin-bottom:18px;
+    color:#805991;
+}
+
+audio{
+    width:100%;
+    max-width:500px;
+}
+
+/* متن عاشقانه */
+.love-letter{
+    background:rgba(255,255,255,.82);
+    border-radius:30px;
+    padding:35px 28px;
+    line-height:2.25;
+    font-size:16px;
+    white-space:pre-line;
+    box-shadow:0 12px 35px rgba(100,60,130,.13);
+    border:1px solid rgba(255,255,255,.9);
+}
+
+.love-letter::first-line{
+    color:#70457f;
+    font-weight:bold;
+}
+
+/* گالری */
+.gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.gallery-card{
+    background:white;
+    border-radius:22px;
+    padding:8px;
+    box-shadow:0 8px 25px rgba(80,50,100,.12);
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.gallery-card img{
+    width:100%;
+    height:300px;
+    display:block;
+    object-fit:cover;
+    border-radius:17px;
+    transition:.35s;
+}
+
+.gallery-card:hover img{
+    transform:scale(1.03);
+}
+
+/* چتامون */
+.chat-gallery{
+    display:grid;
+    grid-template-columns:repeat(3,1fr);
+    gap:18px;
+}
+
+.chat-card{
+    background:white;
+    border-radius:20px;
+    padding:8px;
+    box-shadow:0 8px 25px rgba(80,50,100,.13);
+    height:390px;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    overflow:hidden;
+    cursor:pointer;
+}
+
+.chat-card img{
+    width:100%;
+    height:100%;
+    object-fit:contain;
+    border-radius:14px;
+    background:#faf7fc;
+}
+
+/* خاطرات */
+.memory-gallery{
+    display:grid;
+    grid-template-columns:repeat(2,1fr);
+    gap:18px;
+}
+
+.memory-card{
+    background:white;
+    border-radius:22px;
+    padding:8px;
+    box-shadow:0 8px 25px rgba(80,50,100,.12);
+    overflow:hidden;
+}
+
+.memory-card img{
+    width:100%;
+    height:300px;
+    object-fit:cover;
+    border-radius:17px;
+    cursor:pointer;
+}
+
+/* تایپ */
+.typing-box{
+    text-align:center;
+    background:rgba(255,255,255,.7);
+    padding:35px 20px;
+    border-radius:30px;
+    box-shadow:0 10px 30px rgba(100,60,130,.1);
+}
+
+#typing{
+    font-size:28px;
+    color:#76478a;
+    font-weight:bold;
+    min-height:45px;
+}
+
+/* اسلایدشو */
+.slideshow{
+    background:white;
+    border-radius:28px;
+    padding:10px;
+    box-shadow:0 12px 35px rgba(80,50,100,.14);
+}
+
+.slideshow img{
+    width:100%;
+    height:520px;
+    object-fit:contain;
+    background:#faf7fc;
+    border-radius:22px;
+}
+
+.slide-controls{
+    display:flex;
+    justify-content:center;
+    gap:12px;
+    margin-top:15px;
+}
+
+/* نامه مخفی */
+.secret-box{
+    text-align:center;
+}
+
+.secret-letter{
+    display:none;
+    margin-top:20px;
+    background:#fff;
+    border-radius:25px;
+    padding:30px;
+    line-height:2.2;
+    box-shadow:0 10px 30px rgba(100,60,130,.12);
+}
+
+.secret-letter.show{
+    display:block;
+    animation:appear .5s ease;
+}
+
+@keyframes appear{
+    from{
+        opacity:0;
+        transform:translateY(15px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* بوس */
+.kiss-section{
+    text-align:center;
+}
+
+.kiss-area{
+    position:relative;
+    min-height:180px;
+    overflow:hidden;
+    border-radius:30px;
+    background:rgba(255,255,255,.55);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+
+.kiss{
+    position:absolute;
+    font-size:30px;
+    pointer-events:none;
+    animation:kissFly 1.8s ease-out forwards;
+}
+
+@keyframes kissFly{
+    0%{
+        opacity:1;
+        transform:translate(0,0) scale(.7) rotate(0deg);
+    }
+    100%{
+        opacity:0;
+        transform:translate(var(--x),-170px) scale(1.5) rotate(var(--r));
+    }
+}
+
+.big-kiss{
+    position:absolute;
+    font-size:80px;
+    animation:bigKiss .9s ease forwards;
+}
+
+@keyframes bigKiss{
+    0%{transform:scale(.2);opacity:0;}
+    60%{transform:scale(1.3);opacity:1;}
+    100%{transform:scale(1);opacity:0;}
+}
+
+/* هدیه */
+.gift-section{
+    text-align:center;
+}
+
+.gift{
+    font-size:90px;
+    cursor:pointer;
+    display:inline-block;
+    transition:.3s;
+}
+
+.gift:hover{
+    transform:scale(1.1) rotate(-5deg);
+}
+
+.gift-message{
+    display:none;
+    background:white;
+    border-radius:28px;
+    padding:30px;
+    margin-top:20px;
+    line-height:2.2;
+    box-shadow:0 10px 30px rgba(100,60,130,.13);
+}
+
+.gift-message.show{
+    display:block;
+    animation:appear .5s ease;
+}
+
+/* پایان */
+.final{
+    text-align:center;
+    padding:90px 20px 110px;
+}
+
+.final-box{
+    background:rgba(255,255,255,.8);
+    border-radius:35px;
+    padding:45px 25px;
+    box-shadow:0 15px 40px rgba(100,60,130,.14);
+}
+
+.final-box .heart{
+    font-size:55px;
+}
+
+.final-box h2{
+    margin-top:15px;
+    color:#6f4383;
+    line-height:2;
+}
+
+/* لایت باکس */
+.lightbox{
+    position:fixed;
+    inset:0;
+    background:rgba(30,15,40,.82);
+    display:none;
+    align-items:center;
+    justify-content:center;
+    z-index:1000;
+    padding:20px;
+}
+
+.lightbox.show{
+    display:flex;
+}
+
+.lightbox img{
+    max-width:95%;
+    max-height:90vh;
+    object-fit:contain;
+    border-radius:18px;
+}
+
+.close-lightbox{
+    position:absolute;
+    top:18px;
+    right:22px;
+    color:white;
+    font-size:35px;
+    cursor:pointer;
+}
+
+/* موبایل */
+@media(max-width:700px){
+
+    section{
+        padding:50px 0;
+    }
+
+    .hero h1{
+        font-size:27px;
+    }
+
+    .hero-heart{
+        font-size:55px;
+    }
+
+    .love-letter{
+        font-size:15px;
+        padding:25px 20px;
+        line-height:2.15;
+    }
+
+    .gallery,
+    .memory-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .chat-gallery{
+        grid-template-columns:repeat(2,1fr);
+        gap:12px;
+    }
+
+    .chat-card{
+        height:330px;
+    }
+
+    .gallery-card img,
+    .memory-card img{
+        height:320px;
+    }
+
+    .slideshow img{
+        height:400px;
+    }
+
+    #typing{
+        font-size:23px;
+    }
+}
+
+@media(max-width:430px){
+
+    .chat-gallery{
+        grid-template-columns:1fr;
+    }
+
+    .chat-card{
+        height:500px;
+    }
+
+    .gallery-card img,
+    .memory-card img{
+        height:360px;
+    }
+
+    .slideshow img{
+        height:350px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- قلب‌های شناور -->
+<div class="floating-heart" style="left:8%;animation-duration:10s;">💜</div>
+<div class="floating-heart" style="left:22%;animation-duration:13s;animation-delay:2s;">🫀</div>
+<div class="floating-heart" style="left:38%;animation-duration:11s;animation-delay:4s;">💗</div>
+<div class="floating-heart" style="left:57%;animation-duration:14s;animation-delay:1s;">💜</div>
+<div class="floating-heart" style="left:76%;animation-duration:12s;animation-delay:3s;">🫂</div>
+<div class="floating-heart" style="left:90%;animation-duration:15s;animation-delay:5s;">💗</div>
+
+
+<!-- اول صفحه -->
+<header class="hero">
+    <div class="hero-box">
+
+        <div class="hero-heart">🫀</div>
+
+        <h1>علیرضای تبسم... 💜</h1>
+
+        <p>
+            یه گوشه‌ی کوچیک از دنیای دوتاییِ ما،
+            برای روزی که باهم یکی شدیم. 🖇
+        </p>
+
+        <br>
+
+        <button class="btn" onclick="document.getElementById('music').scrollIntoView()">
+            بریم توی خاطره‌هامون 🎀
+        </button>
+
+    </div>
+</header>
+
+
+<main class="container">
+
+<!-- آهنگ -->
+<section id="music">
+
+    <h2 class="section-title">
+        🎵 آهنگِ ما
+        <span>این آهنگ رو بزن و بعد بیا متنمون رو بخون... 💜</span>
+    </h2>
+
+    <div class="music-card">
+
+        <p>
+            بزن گوش کن... شاید این آهنگ یه تیکه از «ما» بشه. 🫀
+        </p>
+
+        <audio controls>
+            <source src="music.mp3" type="audio/mpeg">
+            مرورگر شما از پخش آهنگ پشتیبانی نمی‌کند.
+        </audio>
+
+    </div>
+
+</section>
+
+
+<!-- متن اصلی -->
+<section id="love-text">
+
+    <h2 class="section-title">
+        💌 برای علیرضای من
+        <span>حرفایی که از تهِ دلِ تبسم نوشته شدن...</span>
+    </h2>
+
+    <div class="love-letter">
+
+🫀 علیرضای تبسم، بندبندِ وجودم... 💜
+
+۳ مهر... روزی که باهم یکی شدیم. 🖇
+
+روزی که شاید اون لحظه نمی‌دونستم قراره بعدش چقدر دوستت داشته باشم، چقدر به بودنت عادت کنم، و یه روزی برسه که نبودنت حتی برای چند لحظه هم دلمو بلرزونه... 🫂
+
+علیرضا، تو برای من فقط یه اسم نیستی... تو همون آدمی هستی که باهاش خندیدم، باهاش دلم گرفت، باهاش آروم شدم و باهاش فهمیدم آدم می‌تونه یه نفر رو بیشتر از چیزی که فکر می‌کرد دوست داشته باشه. 💜
+
+من همون پرنسس کوچولوی توام... 🎀 همونی که شاید گاهی لوس بشه، گاهی غر بزنه، گاهی قهر کنه، ولی تهِ همه‌ی اینا فقط یه چیز می‌خواد: خودِ تو رو. 🫂
+
+می‌دونی قشنگ‌ترین قسمتِ دوست داشتنت چیه؟ اینکه وقتی می‌گی «پرنسس کوچولو»، یه جوری دلم گرم میشه که انگار تمام دنیا برای چند ثانیه فقط مالِ ما دوتاست. 🍭💜
+
+من نمی‌خوام فقط امروز و امسال کنارت باشم... دلم می‌خواد سال‌ها بعد، وقتی به ۳ مهر نگاه می‌کنیم، لبخند بزنیم و بگیم: «یادت میاد از کجا شروع شد؟» 🖇
+
+اگه هزار بار دیگه هم برگردم به همون روز، باز هم تو رو انتخاب می‌کنم. باز هم دستت رو می‌گیرم، باز هم می‌خوام پرنسس کوچولوی تو باشم. 🎀🫂
+
+تو شیرین‌ترین قسمتِ زندگیِ منی... 🍭 و البته گاهی هم همون قسمتِ شیطون و تند و دیوونه‌کننده‌ش. 🌶😂
+
+علیرضای من، ممنونم که شدی یکی از قشنگ‌ترین «ما»های زندگیِ تبسم.
+
+سالگردِ روزی که باهم یکی شدیم مبارک. 💜
+
+دوستت دارم... نه فقط برای امروز، برای تمامِ روزهایی که هنوز باهم نساختیم. 🫀🖇
+
+از طرفِ پرنسس کوچولوت 🎀 برای علیرضای تبسمِ من. 💜
+
+    </div>
+
+</section>
+
+
+<!-- بچگیامون -->
+<section>
+
+    <h2 class="section-title">
+        🧸 بچگیامون
+        <span>از همون موقع‌ها تا الان... 💜</span>
+    </h2>
+
+    <div class="gallery">
+
+        <div class="gallery-card">
+            <img src="بچگیامون/998c5843-c746-4200-9f70-5d6f4871d1dc.jpg" alt="بچگیامون">
+        </div>
+
+        <div class="gallery-card">
+            <img src="بچگیامون/7583e1cf-c0f3-47c8-943e-a64020dea524.jpg" alt="بچگیامون">
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- دیتامون -->
+<section>
+
+    <h2 class="section-title">
+        📸 یه آلبوم کوچیک از ما
+        <span>فقط عکس‌های دیتامون 💜</span>
+    </h2>
+
+    <div class="gallery">
+
+        <div class="gallery-card"><img src="دیتامون/3dcd2295-fa25-45a9-9544-e1d3f5067388.jpg"></div>
+        <div class="gallery-card"><img src="دیتامون/30bcf9f7-5320-46e3-9930-9cf4c14ba9b5.jpg"></div>
+        <div class="gallery-card"><img src="دیتامون/43b6240d-ef67-4682-bd8a-b9fd0372cdd7.jpg"></div>
+        <div class="gallery-card"><img src="دیتامون/86edecb9-ca40-4f02-a098-76faf73d050c.jpg"></div>
+        <div class="gallery-card"><img src="دیتامون/6037ec65-6354-4989-850e-4d5c898ddda4.jpg"></div>
+        <div class="gallery-card"><img src="دیتامون/f20f8571-7394-4e32-9bc2-8b61f7523ed3.jpg"></div>
+        <div class="gallery-card"><img src="دیتامون/photo_29917246956_x.jpg"></div>
+        <div class="gallery-card"><img src="دیتامون/b41fff71-764f-4206-8965-23f326c13d62.jpg"></div>
+        <div class="gallery-card"><img src="دیتامون/photo_29917250968_x.jpg"></div>
+        <div class="gallery-card"><img src="دیتامون/c0d71b6c-073e-4a41-b1ad-92dc557a2e6a.jpg"></div>
+
+    </div>
+
+</section>
+
+
+<!-- چتامون -->
+<section>
+
+    <h2 class="section-title">
+        💬 چتامون
+        <span>یه عالمه حرف که فقط خودمون می‌فهمیم... 🫂</span>
+    </h2>
+
+    <div class="chat-gallery">
+
+        <div class="chat-card"><img src="چتامون/06eede69-0856-4494-b9d1-21d0e3dc40eb.jpg"></div>
+        <div class="chat-card"><img src="چتامون/dadeb52e-bafa-4be8-b878-b863883a3f25.jpg"></div>
+        <div class="chat-card"><img src="چتامون/1257d41d-7f56-4f74-bd91-8273e797a5be.jpg"></div>
+        <div class="chat-card"><img src="چتامون/91377557-1b48-4c41-b98c-74ea033a977d.jpg"></div>
+        <div class="chat-card"><img src="چتامون/f6ed8156-d44f-4546-9909-dd22806a8b23.jpg"></div>
+        <div class="chat-card"><img src="چتامون/522dae92-57ff-4a4f-a5c4-c7c91b28c3fe.jpg"></div>
+        <div class="chat-card"><img src="چتامون/b6ddc4b6-7a5e-44f7-873f-c6b695a40449.jpg"></div>
+        <div class="chat-card"><img src="چتامون/0e4853e6-96f2-42c7-a946-86ba33bd227a.jpg"></div>
+        <div class="chat-card"><img src="چتامون/806aec1c-b371-4e2f-868e-512a91831653.jpg"></div>
+        <div class="chat-card"><img src="چتامون/a758106d-58b4-410f-b964-d9defa00f06b.jpg"></div>
+        <div class="chat-card"><img src="چتامون/e691a7c6-21e8-4df1-8c34-0f564026085c.jpg"></div>
+        <div class="chat-card"><img src="چتامون/6b221a5f-80b8-4d93-bdfb-857a3b948b4f.jpg"></div>
+        <div class="chat-card"><img src="چتامون/8191ccac-88d4-4bc5-b4cc-39d35cc33032.jpg"></div>
+        <div class="chat-card"><img src="چتامون/d13ab47b-464f-4c29-961f-fe87e8e06512.jpg"></div>
+        <div class="chat-card"><img src="چتامون/27cfcb82-ecfb-42d2-ac1a-4ac8be3027b0.jpg"></div>
+        <div class="chat-card"><img src="چتامون/76d5826c-d4cd-4893-b26b-460ca6a1d4a9.jpg"></div>
+        <div class="chat-card"><img src="چتامون/72f6a3e8-955c-4deb-b00a-4d3c72e306f2.jpg"></div>
+        <div class="chat-card"><img src="چتامون/ae4ea371-022e-40a3-8c1c-270dbb9ce3fb.jpg"></div>
+        <div class="chat-card"><img src="چتامون/00ec23b3-be16-43b2-9e76-2470be7edf70.jpg"></div>
+
+    </div>
+
+</section>
+
+
+<!-- خاطرات -->
+<section>
+
+    <h2 class="section-title">
+        🫂 خاطراتمون
+        <span>چیزایی که هیچ‌وقت نمی‌خوام فراموششون کنم...</span>
+    </h2>
+
+    <div class="memory-gallery">
+
+        <div class="memory-card"><img src="خاطراتمون/2beda6ef-d3aa-4279-afd7-b98e04be1b83.jpg"></div>
+        <div class="memory-card"><img src="خاطراتمون/31b447a0-f3d6-4e5f-a85e-33e9caa91301.jpg"></div>
+        <div class="memory-card"><img src="خاطراتمون/96da3e27-1d6a-4a7b-8517-5b58ebac138f.jpg"></div>
+        <div class="memory-card"><img src="خاطراتمون/89b33dba-12fa-48ed-a200-dc011354849b.jpg"></div>
+        <div class="memory-card"><img src="خاطراتمون/406b4d56-28b3-4991-b2e7-c98690c815df.jpg"></div>
+        <div class="memory-card"><img src="خاطراتمون/462eb94a-3506-4857-abc7-4403ee8f4f3c.jpg"></div>
+        <div class="memory-card"><img src="خاطراتمون/646e4c63-9ce0-4855-827e-bf0e88f9828e.jpg"></div>
+        <div class="memory-card"><img src="خاطراتمون/f9825c31-a07a-437d-9ad0-097493f78420.jpg"></div>
+        <div class="memory-card"><img src="خاطراتمون/c3260824-d9ac-4f71-add6-ba1d8d5ba39e.jpg"></div>
+        <div class="memory-card"><img src="خاطراتمون/d173f486-13f3-41b2-8204-794207e21dd3.jpg"></div>
+
+    </div>
+
+</section>
+
+
+<!-- تایپ -->
+<section>
+
+    <div class="typing-box">
+        <div id="typing"></div>
+    </div>
+
+</section>
+
+
+<!-- اسلایدشو -->
+<section>
+
+    <h2 class="section-title">
+        🎞️ چند قاب از ما
+    </h2>
+
+    <div class="slideshow">
+
+        <img id="slideImage" src="خاطراتمون/2beda6ef-d3aa-4279-afd7-b98e04be1b83.jpg">
+
+        <div class="slide-controls">
+            <button class="btn" onclick="previousSlide()">قبلی 💜</button>
+            <button class="btn" onclick="nextSlide()">بعدی 🫂</button>
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- نامه مخفی -->
+<section>
+
+    <div class="secret-box">
+
+        <h2 class="section-title">
+            💌 یه چیز کوچیک برای تو
+        </h2>
+
+        <button class="btn" onclick="showSecret()">
+            نامه رو باز کن 🎀
+        </button>
+
+        <div id="secretLetter" class="secret-letter">
+            بعضی آدما میان توی زندگی آدم و فقط یه خاطره می‌شن...
+            <br><br>
+            ولی تو برای من فقط یه خاطره نیستی.
+            <br>
+            تو خودِ قشنگ‌ترین قسمتِ خاطره‌هامی. 🫀💜
+            <br><br>
+            و من هنوزم هر بار به «ما» فکر می‌کنم،
+            تهِ دلم یه لبخند میاد. 🫂
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- بوس -->
+<section class="kiss-section">
+
+    <h2 class="section-title">
+        💋 یه بوس برای تو
+        <span>روش بزن ببین چی میشه... 😚</span>
+    </h2>
+
+    <div class="kiss-area" id="kissArea">
+
+        <button class="btn" onclick="sendKiss()">
+            💋 بوسمو بگیر
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- هدیه -->
+<section class="gift-section">
+
+    <h2 class="section-title">
+        🎁 یه سورپرایز کوچولو
+    </h2>
+
+    <div class="gift" onclick="openGift()">
+        🎁
+    </div>
+
+    <div id="giftMessage" class="gift-message">
+
+        <h3>برای تو... 🫀💜</h3>
+
+        <br>
+
+        هرچی اینجا هست،
+        هر عکسی که دیدی،
+        هر حرفی که خوندی،
+        یه تیکه از «ما»ست.
+
+        <br><br>
+
+        و اگه دوباره از اول شروع می‌کردیم،
+        باز هم دلم می‌خواست آخرش به تو برسم. 🫂
+
+        <br><br>
+
+        دوستت دارم، علیرضا. 💜
+
+    </div>
+
+</section>
+
+</main>
+
+
+<!-- پایان -->
+<section class="final">
+
+    <div class="final-box">
+
+        <div class="heart">🫀💜</div>
+
+        <h2>
+            عاشقانه عاشقتم، علیرضای تبسم... 🫀💜
+        </h2>
+
+    </div>
+
+</section>
+
+
+<!-- لایت باکس -->
+<div class="lightbox" id="lightbox">
+
+    <div class="close-lightbox" onclick="closeLightbox()">×</div>
+
+    <img id="lightboxImage" src="">
+
+</div>
+
+
+<script>
+
+/* کلیک روی عکس‌ها برای بزرگ شدن */
+document.querySelectorAll("img").forEach(function(img){
+
+    img.addEventListener("click",function(){
+
+        if(this.closest(".slideshow")) return;
+
+        document.getElementById("lightboxImage").src = this.src;
+        document.getElementById("lightbox").classList.add("show");
+
+    });
+
+});
+
+
+function closeLightbox(){
+
+    document.getElementById("lightbox").classList.remove("show");
+
+}
+
+
+/* نامه */
+function showSecret(){
+
+    document.getElementById("secretLetter").classList.toggle("show");
+
+}
+
+
+/* هدیه */
+function openGift(){
+
+    document.getElementById("giftMessage").classList.toggle("show");
+
+}
+
+
+/* بوس */
+function sendKiss(){
+
+    const area = document.getElementById("kissArea");
+
+    for(let i=0;i<14;i++){
+
+        const kiss = document.createElement("div");
+
+        kiss.className="kiss";
+        kiss.textContent = Math.random() > .4 ? "💋" : "💜";
+
+        kiss.style.left = (35 + Math.random()*30) + "%";
+        kiss.style.top = "50%";
+
+        kiss.style.setProperty("--x",(Math.random()*260-130)+"px");
+        kiss.style.setProperty("--r",(Math.random()*90-45)+"deg");
+
+        area.appendChild(kiss);
+
+        setTimeout(function(){
+            kiss.remove();
+        },1800);
+
+    }
+
+    const big = document.createElement("div");
+
+    big.className="big-kiss";
+    big.textContent="💋";
+
+    area.appendChild(big);
+
+    setTimeout(function(){
+        big.remove();
+    },900);
+
+}
+
+
+/* تایپ */
+const typingText = "تبسم × علیرضا 💜";
+
+let typingIndex = 0;
+
+function typeText(){
+
+    if(typingIndex < typingText.length){
+
+        document.getElementById("typing").textContent += typingText.charAt(typingIndex);
+
+        typingIndex++;
+
+        setTimeout(typeText,120);
+
+    }
+
+}
+
+typeText();
+
+
+/* اسلایدشو */
+const slides = [
+
+"خاطراتمون/2beda6ef-d3aa-4279-afd7-b98e04be1b83.jpg",
+"خاطراتمون/31b447a0-f3d6-4e5f-a85e-33e9caa91301.jpg",
+"خاطراتمون/96da3e27-1d6a-4a7b-8517-5b58ebac138f.jpg",
+"خاطراتمون/89b33dba-12fa-48ed-a200-dc011354849b.jpg",
+"خاطراتمون/406b4d56-28b3-4991-b2e7-c98690c815df.jpg",
+"خاطراتمون/462eb94a-3506-4857-abc7-4403ee8f4f3c.jpg",
+"خاطراتمون/646e4c63-9ce0-4855-827e-bf0e88f9828e.jpg",
+"خاطراتمون/f9825c31-a07a-437d-9ad0-097493f78420.jpg",
+"خاطراتمون/c3260824-d9ac-4f71-add6-ba1d8d5ba39e.jpg",
+"خاطراتمون/d173f486-13f3-41b2-8204-794207e21dd3.jpg"
+
+];
+
+let currentSlide = 0;
+
+function showSlide(){
+
+    document.getElementById("slideImage").src = slides[currentSlide];
+
+}
+
+function nextSlide(){
+
+    currentSlide++;
+
+    if(currentSlide >= slides.length){
+        currentSlide = 0;
+    }
+
+    showSlide();
+
+}
+
+function previousSlide(){
+
+    currentSlide--;
+
+    if(currentSlide < 0){
+        currentSlide = slides.length - 1;
+    }
+
+    showSlide();
+
+}
+
+
+/* تغییر خودکار اسلاید */
+setInterval(function(){
+
+    nextSlide();
+
+},5000);
+
+
+/* بستن لایت‌باکس با کلیک بیرون */
+document.getElementById("lightbox").addEventListener("click",function(e){
+
+    if(e.target === this){
+        closeLightbox();
+    }
+
+});
+
+</script>
+
+</body>
+</html>
